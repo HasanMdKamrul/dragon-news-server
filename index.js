@@ -42,6 +42,12 @@ app.get("/category/:id", (req, res) => {
   }
 });
 
+// ** All news load for the Home component
+
+app.get("/allnews", (req, res) => {
+  res.send(newsData);
+});
+
 app.listen(port, () =>
   console.log(`Dragon news server running on port: ${port}`)
 );
